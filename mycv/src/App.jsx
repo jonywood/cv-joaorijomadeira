@@ -29,7 +29,7 @@ const programming = [
 
 
 useEffect(() => {
-  fetch(`http://localhost:3002/experiences?ts=${Date.now()}`)
+  fetch(`https://cv-joaorijomadeira.onrender.com/experiences`)
     .then((res) => res.json())
     .then((data) => setExperiences(data));
 }, []);
