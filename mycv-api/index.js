@@ -43,11 +43,19 @@ const experiences = [
   }
 ];
 
-// endpoint REST
+// rota teste
+app.get("/", (req, res) => {
+  res.send("API online 🚀");
+});
+
+// API
 app.get("/experiences", (req, res) => {
   res.json(experiences);
 });
 
-app.listen(3002, () => {
-  console.log("API running on http://localhost:3002/experiences");
+// 🔥 IMPORTANTE: PORT dinâmico
+const PORT = process.env.PORT || 3002;
+
+app.listen(PORT, () => {
+  console.log(`API running on http://localhost:${PORT}`);
 });
